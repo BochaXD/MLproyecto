@@ -2,13 +2,6 @@ import ast
 import re
 from collections import deque
 from zss import Node, simple_distance
-from nltk.stem.porter import PorterStemmer
-from nltk.corpus import stopwords
-import nltk
-nltk.download('stopwords')
-n=stopwords.words("english")
-
-
 
 def _jaccard_distance(self):
     #Distancia de Jaccard
