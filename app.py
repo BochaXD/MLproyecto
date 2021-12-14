@@ -11,22 +11,22 @@ app.config["MONGO_URI"] = "mongodb+srv://proyectoml:8voyOIN8aam7j94e@cluster0.qd
 mongo = PyMongo(app)
  #comprobacion de que funciona 
 
-todos = mongo.db.todos
+#todos = mongo.db.todos
 
 
 
 @app.route('/')
 def index():
-    saved_todos = todos.find()
-    return render_template('index.html', todos=saved_todos)
+#    saved_todos = todos.find()
+    return render_template('index.html')
 @app.route('/add', methods=['POST'])
 #carga
 def add_todo():
     
     new_todo = request.form.get('new-todo')
     new_todo2 = request.form.get('new-todo2')
-    todos.insert_one({'text' : new_todo, 'complete' : False})
-    todos.insert_one({'text' : new_todo2, 'complete' : False})
+    #todos.insert_one({'text' : new_todo, 'complete' : False})
+    #todos.insert_one({'text' : new_todo2, 'complete' : False})
     #textolnp= metodos.nlp ('new-todo')
     return redirect(url_for('index'))
 #@app.route('/complete/<oid>')
@@ -38,12 +38,12 @@ def add_todo():
 #
 @app.route('/delete_completed')
 def delete_completed():
-    todos.delete_many({'complete' : True})
+   # todos.delete_many({'complete' : True})
     return redirect(url_for('index'))
 
 @app.route('/delete_all')
 def delete_all():
-    todos.delete_many({})
+    #todos.delete_many({})
     return redirect(url_for('index'))
 
 
