@@ -7,8 +7,8 @@ import json
 
 #configuracion del mongo no tocar 
 app=Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://proyectoml:8voyOIN8aam7j94e@cluster0.qd2uc.mongodb.net/ProyectoML?retryWrites=true&w=majority"
-mongo = PyMongo(app)
+#app.config["MONGO_URI"] = "mongodb+srv://proyectoml:8voyOIN8aam7j94e@cluster0.qd2uc.mongodb.net/ProyectoML?retryWrites=true&w=majority"
+#mongo = PyMongo(app)
  #comprobacion de que funciona 
 
 #todos = mongo.db.todos

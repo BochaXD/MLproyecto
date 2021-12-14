@@ -11,4 +11,4 @@ def addTwoNumbers(self, l1, l2):
         cur.next = ListNode(carry%10)
         cur = cur.next
         carry //= 10
-    return dummy.next                    
+    return dummy.next
