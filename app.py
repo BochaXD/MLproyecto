@@ -15,7 +15,7 @@ app=Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/main')
 def index():
 #    saved_todos = todos.find()
     return render_template('index.html')
